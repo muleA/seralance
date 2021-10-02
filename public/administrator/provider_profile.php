@@ -84,6 +84,12 @@ require "includes/admin-navigation.php";
 											</td>
                                          </tr>
 
+                                         <td>Email</td>
+											<td>
+                                                <?php echo $_SESSION['serviceProviderDetails']['email'];?>
+											</td>
+                                         </tr>
+
                                          <tr>
                                           <td>Nationality</td>
 											<td>
@@ -106,7 +112,7 @@ require "includes/admin-navigation.php";
                                          </tr>
 
                                          <tr>
-                                            <td>Address</td>
+                                            <td>Addkress</td>
 											<td>
                                                 <?php echo $_SESSION['serviceProviderDetails']['address'];?>
 											</td>
@@ -143,7 +149,7 @@ require "includes/admin-navigation.php";
 											<td>
                                                 <div class='list-group'>
                                                 <?php
-                                                    foreach($_SESSION['serviceProviderDetails']['skill'] as $skill){
+                                                    foreach ($_SESSION['serviceProviderDetails']['skill'] as $skill) {
                                                         echo <<<EOT
                                                             
                                                             <li class='list-group-item '>
@@ -162,7 +168,7 @@ require "includes/admin-navigation.php";
 											<td>
                                                 <div class='list-group'>
                                                 <?php
-                                                    foreach($_SESSION['serviceProviderDetails']['language'] as $language){
+                                                    foreach ($_SESSION['serviceProviderDetails']['language'] as $language) {
                                                         echo <<<EOT
                                                             
                                                             <li class='list-group-item '>
@@ -187,7 +193,7 @@ require "includes/admin-navigation.php";
 											<td>
                                                 <div class='list-group'>
                                                 <?php
-                                                        foreach($_SESSION['serviceProviderDetails']['portfolio'] as $url){
+                                                        foreach ($_SESSION['serviceProviderDetails']['portfolio'] as $url) {
                                                             echo <<<EOT
                                                                 
                                                                 <li class='list-group-item '>
@@ -255,8 +261,8 @@ require "includes/admin-navigation.php";
 <div class="row">
     <div class="col-sm-12 mx-auto">
         <?php
-            if(!empty($_SESSION['serviceProviderDetails']['ratings'] )){
-                foreach($_SESSION['serviceProviderDetails']['ratings'] as $rating){
+            if (!empty($_SESSION['serviceProviderDetails']['ratings'])) {
+                foreach ($_SESSION['serviceProviderDetails']['ratings'] as $rating) {
                     echo <<<EOT
                         
                     <div class="comment">
@@ -272,7 +278,7 @@ require "includes/admin-navigation.php";
                     </div> 
                     EOT;
                 }
-            }            
+            }
         ?>
               
 

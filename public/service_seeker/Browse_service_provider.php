@@ -1,11 +1,10 @@
 <?php
    require "includes/service_seeker-navigation.php";
 
-   if($_SERVER["REQUEST_METHOD"] === "POST"){
-		$serviceProviders = $serviceSeekerController->getServiceProviders($_POST);
-   }
-   else{
-	$serviceProviders = $serviceSeekerController->getServiceProviders();
+   if ($_SERVER["REQUEST_METHOD"] === "POST") {
+       $serviceProviders = $serviceSeekerController->getServiceProviders($_POST);
+   } else {
+       $serviceProviders = $serviceSeekerController->getServiceProviders();
    }
    
 ?>
@@ -292,8 +291,8 @@
                                                                     $myskill = "";
                                                                     foreach ($serviceProvider['skill'] as $skill) {
                                                                         $myskill .= $skill['skill_name']."| ";
-																	}
-																	$rating = number_format($serviceProvider['rate']['score'],2);
+                                                                    }
+                                                                    $rating = number_format($serviceProvider['rate']['score'], 2);
                                                                     echo <<<EOT
 																				<div class="col-sm-12">
 																				<li class="profile-item mb-3">
@@ -308,7 +307,7 @@
 																					
 																					<div class="profile-list-info">
 																						<div class="profile-list-detail"> 
-																						<span><strong><i class="fas fa-map-marker-alt"></i> </strong>{$serviceProvider['country']} , {$serviceProvider['city']} , {$serviceProvider['address']} </span>
+																						<span><strong><i class="fa fa-map-marker"></i> </strong>{$serviceProvider['country']} , {$serviceProvider['city']} , {$serviceProvider['address']} </span>
 																						<span class="profile-list-subtitle">
 																						{$myskill}</span>
 																						<span><strong>Education: </strong>{$serviceProvider['education']}</span>
@@ -358,13 +357,14 @@
 						</div>
 						
 						<!--  -->
+						</div>
 					</div>
 				</div>
 		</div>
 	</div>
 	</section>
 	<?php
-		require "includes/service_seeker-footer.php";
+        require "includes/service_seeker-footer.php";
    ?>
 
 		<script >

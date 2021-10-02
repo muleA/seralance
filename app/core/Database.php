@@ -1,8 +1,8 @@
 <?php
     class Database{
         private $servername = "localhost";
-        private $username = "nablotech";
-        private $password = "123123";
+        private $username = "root";
+        private $password = "";
 
         public function setConnection()
         {   

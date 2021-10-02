@@ -3,54 +3,53 @@
    $title = $description = $minBudget = $maxBudget = "";
   
   $titleErr = $categoryErr = $descriptionErr = $projectFileErr = $skillErr = $minMaxErr = "";
-  if($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['announce_btn'])){    
-	$feedback = $serviceSeekerController->validateProjectAnnouncement($_POST,$_FILES);
-    if($feedback['valid'] == false){
+  if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['announce_btn'])) {
+      $feedback = $serviceSeekerController->validateProjectAnnouncement($_POST, $_FILES);
+      if ($feedback['valid'] == false) {
       
       // setting inserted data
-      if(!empty($feedback['data']['title'])){
-        $title = $feedback['data']['title'];
-      }
+          if (!empty($feedback['data']['title'])) {
+              $title = $feedback['data']['title'];
+          }
 
-      if(!empty($feedback['data']['description'])){
-        $description = $feedback['data']['description'];
-	  }
-	  
-      if(!empty($feedback['data']['minbudget'])){
-        $minBudget = $feedback['data']['minbudget'];
-      }
-
-      if(!empty($feedback['data']['maxbudget'])){
-        $maxBudget = $feedback['data']['maxbudget'];
-      }
-
-
-      // Setting error values
-      if(!empty($feedback['error']['title'])){
-        $titleErr = $feedback['error']['title'];
-      }
+          if (!empty($feedback['data']['description'])) {
+              $description = $feedback['data']['description'];
+          }
       
-      if(!empty($feedback['error']['category'])){
-        $categoryErr = $feedback['error']['category'];
-      }
+          if (!empty($feedback['data']['minbudget'])) {
+              $minBudget = $feedback['data']['minbudget'];
+          }
 
-      if(!empty($feedback['error']['description'])){
-        $descriptionErr = $feedback['error']['description'];
-      }
+          if (!empty($feedback['data']['maxbudget'])) {
+              $maxBudget = $feedback['data']['maxbudget'];
+          }
 
-      if(!empty($feedback['error']['projectfile'])){
-        $projectFileErr = $feedback['error']['projectfile'];
-      }
 
-      if(!empty($feedback['error']['skill'])){
-        $skillErr = $feedback['error']['skill'];
-      }
+          // Setting error values
+          if (!empty($feedback['error']['title'])) {
+              $titleErr = $feedback['error']['title'];
+          }
+      
+          if (!empty($feedback['error']['category'])) {
+              $categoryErr = $feedback['error']['category'];
+          }
 
-      if(!empty($feedback['error']['minmax'])){
-        $minMaxErr = $feedback['error']['minmax'];
-      }
+          if (!empty($feedback['error']['description'])) {
+              $descriptionErr = $feedback['error']['description'];
+          }
 
-    }
+          if (!empty($feedback['error']['projectfile'])) {
+              $projectFileErr = $feedback['error']['projectfile'];
+          }
+
+          if (!empty($feedback['error']['skill'])) {
+              $skillErr = $feedback['error']['skill'];
+          }
+
+          if (!empty($feedback['error']['minmax'])) {
+              $minMaxErr = $feedback['error']['minmax'];
+          }
+      }
   }
 ?>	
 	    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
@@ -123,11 +122,11 @@
 						<div class="col-sm-8">
 						<select class="form-control skill-multiple" name="skill[]" multiple="multiple">
 								<?php
-									$skills = $serviceSeekerController->getAllSkills();
-									foreach($skills as $skill){
-										echo '<option value="'.$skill['skill_id'].'">'.$skill['skill_name'].'</option>';         
-									} 
-								?>    
+                                    $skills = $serviceSeekerController->getAllSkills();
+                                    foreach ($skills as $skill) {
+                                        echo '<option value="'.$skill['skill_id'].'">'.$skill['skill_name'].'</option>';
+                                    }
+                                ?>    
 						</select>
 						<p class="errormessage"> <?php echo $skillErr;?> </p>
 						</div>
@@ -138,18 +137,22 @@
 						<label for="colFormLabelSm" class="col-sm-2
                   col-form-label col-form-label-sm">Minimum</label>
 						<div class="col-sm-2">
-							<input type="number" min=0 oninput="validity.valid||(value='')" class="form-control" name="minbudget" required value = "<?php echo $minBudget;?>"> </div>
+							<input type="text" min=0 oninput="validity.valid||(value='')" class="form-control" name="minbudget" required value = "<?php echo $minBudget;?>"> </div>
 						<label for="colFormLabelSm" class="col-sm-4-offset-4 col-form-label col-form-label-sm"> Maximum </label>
 						<div class="col-sm-2">
 							<input type="number" min=0 oninput="validity.valid||(value='')" class="form-control" name="maxbudget" required value = "<?php echo $maxBudget;?>"> </div>
 					</div>
 					<p class="errormessage"> <?php echo $minMaxErr;?> </p>
-					<input type="text" name="offertype" value = "<?php if(!empty($_SESSION['assignto'])){echo "Offer";} else{ echo 'Announcement';}?>" hidden> 
+					<input type="text" name="offertype" value = "<?php if (!empty($_SESSION['assignto'])) {
+                                    echo "Offer";
+                                } else {
+                                    echo 'Announcement';
+                                }?>" hidden> 
 					<?php
-						if(!empty($_SESSION['assignto'])){
-							echo '<input type="text" name="assignto" value = "'.$_SESSION['assignto'].'" hidden>';
-						}
-					?>					
+                        if (!empty($_SESSION['assignto'])) {
+                            echo '<input type="text" name="assignto" value = "'.$_SESSION['assignto'].'" hidden>';
+                        }
+                    ?>					
 					<div class="form-group mx-auto">
 					<button type="submit" class="btn btn-block btn-primary" name="announce_btn"><i class="fa fa-check-circle"></i>Submit</button>
 					</div>

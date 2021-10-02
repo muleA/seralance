@@ -201,15 +201,16 @@ display: none !important;
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-uppercase mb-1">Total revenue generated</div>
+                      <div class="text-xs font-weight-bold text-uppercase mb-1">
+                        Total revenue generated</div>
                       <div class="h5 mb-0 font-weight-bold text-gray-800 text-center mt-2">
                        <span class="text-info"><?php echo $value['total_revenue'];?></span> 
                       </div>
                      
                     </div>
                     <div class="col-auto">
-                      <i class="fas fa-dollar-sign fa-3x  mb-3 text-success">
-                        
+                      <i class="fa fa-3x mb-3 text-success">
+                        ETB
                       </i>
                       
                     </div>
@@ -280,7 +281,7 @@ display: none !important;
                      
                     </div>
                     <div class="col-auto">
-                      <i class="fa fa-3x fa-legal mb-3 text-danger"></i>
+                      <i class="fa fa-3x fa-legal mb-3 text-success"></i>
                     </div>
                   </div>
                 </div>
@@ -301,7 +302,7 @@ display: none !important;
                      
                     </div>
                     <div class="col-auto">
-                      <i class="fa fa-3x fa-legal mb-3 text-success"></i>
+                      <i class="fa fa-3x fa-legal mb-3 text-danger"></i>
                     </div>
                   </div>
                 </div>
@@ -322,7 +323,7 @@ display: none !important;
                      
                     </div>
                     <div class="col-auto">
-                      <i class="fas fa-3x fa-hands-helping mb-3 text-danger"></i>
+                      <i class="fas fa-3x fa-hands-helping mb-3 text-success"></i>
                     </div>
                   </div>
                 </div>
@@ -343,7 +344,7 @@ display: none !important;
                      
                     </div>
                     <div class="col-auto">
-                    <i class="fas fa-3x fa-hands-helping mb-3 text-success"></i>
+                    <i class="fas fa-3x fa-hands-helping mb-3 text-danger"></i>
                     </div>
                   </div>
                 </div>

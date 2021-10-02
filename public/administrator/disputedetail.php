@@ -2,6 +2,9 @@
 require "includes/admin-navigation.php";
 
 ?>
+<script>
+	document.title = "Admin-Dispute details";
+	</script>
 	<div class="container">
 		<div class="row " style="margin-top: 100px;">
 			<div class="col-sm-8 mx-auto">
@@ -17,6 +20,15 @@ require "includes/admin-navigation.php";
 									<input type="text" class="col" value="<?php echo $_SESSION['disputeDetails']['dispute_id'];?>" disabled>
 								</div>
 						</div>
+
+						<div class="form-group row">
+								<label for="colFormLabelSm" class="col-sm-4 
+						col-form-label col-form-label-sm">Raised by</label>
+								<div class="col-sm-8">
+									<input type="text" class="col" value="<?php echo $_SESSION['disputeDetails']['raised_by'];?>" disabled>
+								</div>
+						</div>
+
 						<div class="form-group row">
 								<label for="colFormLabelSm" class="col-sm-4 
 						col-form-label col-form-label-sm">Dispute date</label>
