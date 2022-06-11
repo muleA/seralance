@@ -788,7 +788,7 @@
                 $this->setAccountNumber($response['data']['accountnumber']);
                 $this->setSummary($response['data']['summary']);
                 $this->setProfilePhoto($response['data']['profilephoto']);
-                $this->setStatus('unverified');
+                $this->setStatus('verified');
                 $this->setWalletBalance(0.00);
 
                 //The variables below are arguments to be passed to insert data to their respective table 

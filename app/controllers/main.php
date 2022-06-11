@@ -56,7 +56,7 @@
             if($reply['valid']==true){
                 /*$ _SESSION['username'] = $reply['username'];
                 $_SESSION['usertype'] = $reply['usertype']; */
-                echo "<script>alert('A verification email has been sent to the email address.');</script>"; 
+                echo "<script>alert('successfully registered.');</script>"; 
                 echo "<script>location.href='".$_SESSION['baseurl']."public/';</script>";                
                 exit();
             }
@@ -81,7 +81,7 @@
             if($reply['valid']==true){
                 /* $_SESSION['username'] = $reply['username'];
                 $_SESSION['usertype'] = $reply['usertype']; */
-                echo "<script>alert('A verification email has been sent to the email address.');</script>";
+                echo "<script>alert('registered successfully');</script>";
                 echo "<script>location.href='".$_SESSION['baseurl']."public/';</script>";                         
                 exit();
             }

@@ -561,7 +561,8 @@ document.title="Seralance- Service Provider Sign up";
 
                    <div class="button-row d-flex mt-4">
                     <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Prev</button>
-                    <button class="btn btn-success ml-auto" type="submit" title="Send"  name="signup_btn">Signup</button>
+                    <button class="btn btn-success ml-auto" 
+                    type="submit" title="Send"  name="signup_btn">Signup</button>
                   </div>
                 </div>
               </div>

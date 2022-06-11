@@ -294,7 +294,10 @@ $firstName = $lastName = $email = $username = $mobileNumber = $city = $address =
       </div>
    </div>
    <div class="form-group  mx-auto ">
-             <button  class="btn  btn-success"><i class="fa fa fa-check-circle"></i>create account</button>
+             <button type="submit" name="signup_btn" class="btn  btn-success">
+               <i class="fa fa fa-check-circle">
+                 
+               </i>create account</button>
          </div>
    </div>
    <!--  -->

@@ -179,10 +179,10 @@ document.title="Home-Seralance";
 	<!--  -->
 <body style="overflow-x: hidden;">
 
-<div class="spinner-wrapper">
+<!-- <div class="spinner-wrapper">
 <div class="spinner">	
 </div> 
-</div>
+</div> -->
 <div class="container-fluid" style="padding:0px; margin:auto">
 	<div class="row">
     <div class="col-sm-12" style="    padding-right: 0;

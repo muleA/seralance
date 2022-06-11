@@ -28,7 +28,8 @@
                <h6 class="m-0 font-weight-bold text-primary">List of Admin Users</h6>
             </div>
             <div class="card-body">
-            <a class="btn btn-success" href="<?php echo $_SESSION['baseurl'];?>public/admin/newadmin"> <i class="fa fa-plus-circle"></i> New Admin User</a>
+            <a class="btn btn-success" href="<?php echo $_SESSION['baseurl'];?>public/admin/newadmin"> 
+            <i class="fa fa-plus-circle"></i> New Admin User</a>
                <!-- data to be fetched from the database  -->
                <div class="table table-responsive mt-5">
 							<table id="table" class="table table-bordered table-striped">

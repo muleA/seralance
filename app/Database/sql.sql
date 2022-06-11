@@ -1,13 +1,13 @@
----------- Create the database  -------
+
 CREATE DATABASE seralance_db;
 
---------- USE DATABASE -------------------
+
 USE seralance_db;
 
-----Set the default char set encoding of the database to udf 8
+
 ALTER DATABASE seralance_db CHARACTER SET utf8 COLLATE utf8_general_ci;
 
----- Create the tables --------
+
 
 CREATE TABLE `user`(
 	username VARCHAR(60) PRIMARY KEY,

@@ -49,10 +49,16 @@
 		                  	  foreach($serviceSeekers as $serviceSeeker){
                               $thirdRow = "";
                               if($serviceSeeker['status']=='Suspended'){
-                                  $thirdRow = '<button class="btn btn-success" onclick ="confirmAction(\''.$_SESSION['baseurl'].'public/admin/activate/serviceseeker/'.$serviceSeeker['username'].'\');" >Activate</button>';
+                                  $thirdRow = '<button class="btn btn-success" 
+                                  onclick ="confirmAction(\''.$_SESSION['baseurl'].
+                                  'public/admin/activate/serviceseeker/'.$serviceSeeker['username'].
+                                  '\');" >Activate</button>';
                               }
                               else{
-                                  $thirdRow = '<button class="btn btn-danger" onclick ="confirmAction(\''.$_SESSION['baseurl'].'public/admin/suspend/serviceseeker/'.$serviceSeeker['username'].'\');" >Suspend</button>';
+                                  $thirdRow = '<button class="btn btn-danger"
+                                   onclick ="confirmAction(\''.$_SESSION['baseurl'].
+                                   'public/admin/suspend/serviceseeker/'.$serviceSeeker['username'].
+                                   '\');" >Suspend</button>';
                               }
                               echo <<<EOT
                                   <tr>
